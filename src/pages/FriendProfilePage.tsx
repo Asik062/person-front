@@ -6,7 +6,7 @@ import { PageLoader } from '../components/ui/Spinner';
 import { ProgressBar } from '../components/ui/ProgressBar';
 import { EmptyState } from '../components/ui/EmptyState';
 import {
-  ArrowLeft, Globe, Lock, Mail, Target, Brain, TrendingUp,
+  ArrowLeft, Lock, Mail, Target, Brain, TrendingUp,
   Star, Trophy, Zap,
 } from 'lucide-react';
 import { cn } from '../utils/cn';
@@ -82,9 +82,9 @@ export function FriendProfilePage() {
   const xpTotal = profile.xp + profile.xpToNextLevel;
   const xpPct = xpTotal > 0 ? (profile.xp / xpTotal) * 100 : 0;
 
-  const motivationPct = profile.avgMotivationLevel * 10;
-  const productivityPct = profile.avgProductivityLevel * 10;
-  const stressPct = profile.avgStressLevel * 10;
+  const motivationPct = profile.avgMotivationLevel;
+  const productivityPct = profile.avgProductivityLevel;
+  const stressPct = profile.avgStressLevel;
   const antiStressPct = Math.max(0, 100 - stressPct);
 
   return (
